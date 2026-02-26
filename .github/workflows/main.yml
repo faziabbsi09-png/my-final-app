@@ -1,12 +1,13 @@
+
 name: Flutter Build APK
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -17,7 +18,7 @@ jobs:
       - run: flutter pub get
       - run: flutter build apk --release
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: my-star-chat-app
+          name: star-chat-apk
           path: build/app/outputs/flutter-apk/app-release.apk
