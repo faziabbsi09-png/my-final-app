@@ -1,0 +1,10 @@
+name: my_final_app
+description: Star Chat Clone
+version: 1.0.0+1
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  zego_uikit_prebuilt_live_audio_room: ^3.3.4
+  
